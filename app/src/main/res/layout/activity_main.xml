@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/ic_launcher_foreground"
+       android:id="@+id/logo_image"
+       android:layout_above="@id/topPanel"
+       android:layout_centerHorizontal="true"
+       android:background="@drawable/bg_border"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topPanel"
+        android:layout_centerInParent="true"
+        android:layout_margin="18dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_border"
+        android:padding="8dp">
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/spinner_background"
+            android:layout_weight="2"
+            android:id="@+id/spin_serve"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="HH:MM"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:enabled="false"
+            android:textSize="22sp"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:textColorHint="@color/black"
+            android:background="@android:color/transparent"
+            android:id="@+id/timepicker_ed"/>
+        <TimePicker
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/ic_baseline_access_time_24"
+            android:id="@+id/timepick"/>
+
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_border"
+        android:layout_margin="18dp"
+        android:layout_below="@id/topPanel"
+        android:hint="Description"
+        android:textColorHint="@color/black"
+        android:id="@+id/desc_edt"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_submit"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Send"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/desc_edt"/>
+
+</RelativeLayout>
